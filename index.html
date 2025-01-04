@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft Studio - Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('banner.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 2rem;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-right: 1rem;
+        }
+
+        header .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 4rem 2rem;
+            height: 400px;
+            background: url('welcome.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        .welcome h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .welcome p {
+            font-size: 1.5rem;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: url('banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .icons i {
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .icons i:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="_Logo.png" alt="WebCraft Studio Logo">
+            <span>WebCraft Studio</span>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="welcome">
+        <h1>Welcome to WebCraft Studio</h1>
+        <p>Innovating Your Online Presence with Creativity and Precision.</p>
+    </div>
+
+    <section id="about" class="section">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>At WebCraft Studio, we create websites and graphic designs that inspire and captivate. By combining creativity and technology, we help individuals and businesses establish their online presence with modern, functional, and aesthetic websites.</p>
+    
+            <p>We specialize in developing websites using HTML, CSS, JavaScript, and WordPress, while also offering graphic design services to build a unique and appealing visual identity for our clients.</p>
+    
+            <h3>What Does WebCraft Studio Offer?</h3>
+                <p><strong>Modern Website Design:</strong> Creative and functional solutions for your websites.</p>
+                <p><strong>Custom Development:</strong> Clean and optimized coding for high performance.</p>
+                <p><strong>Graphic Design and Logos:</strong> We create professional logos, promotional materials, and graphic elements that reflect your brand's identity.</li></p>
+                <p><strong>WordPress Integration:</strong> We build easy-to-manage and SEO-optimized websites.</p>
+                <p> <strong>Support and Maintenance:</strong> Ensuring your website and designs are always in top condition.</p>
+            
+            <h3>Why to Choose Us?</h3>
+            <p>At WebCraft Studio, every project is unique. Our goal is to bring value and creativity to every design or website we build. We believe that details make the difference, and we are committed to exceeding your expectations.</p>
+    
+            <p>Contact us today and let’s build the website and visual identity you deserve!</p>
+        </div>
+    </section>
+    
+
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item" onclick="openLink('https://example1.com')">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <h3>Project 1</h3>
+            </div>
+            <div class="portfolio-item" onclick="openLink('https://example2.com')">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>Project 2</h3>
+            </div>
+            <div class="portfolio-item" onclick="openLink('https://example3.com')">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>Project 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="icons">
+            <!-- Facebook Icon with link -->
+            <a href="https://www.facebook.com/esuksesi" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+    
+            <!-- Email Icon with mailto link -->
+            <a href="mailto:webcraftstudio.ks@gmail.com?subject=Subject%20Here&body=Hello,%20I%20would%20like%20to%20contact%20you." aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+    
+            <!-- Instagram Icon with link -->
+            <a href="https://www.instagram.com/webcraftstudio.ks/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 WebCraft Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Animation for Sections
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Open Link on Click
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+        // Adjust Font Size and Layout Dynamically Based on Device Width
+function adjustLayout() {
+    const width = window.innerWidth;
+    const root = document.documentElement;
+
+    // Adjust font size dynamically
+    if (width <= 480) {
+        root.style.fontSize = "12px"; // Small screens (phones)
+    } else if (width <= 768) {
+        root.style.fontSize = "14px"; // Medium screens (tablets)
+    } else {
+        root.style.fontSize = "16px"; // Large screens (desktops)
+    }
+
+    // Optional: Add custom styles for specific breakpoints
+    if (width <= 768) {
+        document.body.style.padding = "10px";
+    } else {
+        document.body.style.padding = "20px";
+    }
+}
+
+// Call adjustLayout on load and resize
+window.addEventListener('load', adjustLayout);
+window.addEventListener('resize', adjustLayout);
+
+    </script>
+</body>
+</html>
